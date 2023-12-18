@@ -7,13 +7,15 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="App">
+    <div className='page'>
       <Nav />
-      <Banner />
-      {categories.map((category)=>{
-        return <Row key={category.name} title={category.title} path={category.path} isLarge={category.isLarge}/>
-      })}
       
+      <Banner />
+      <section className='lists'>
+        {categories.map((category)=>{
+          return <Row key={category.name} title={category.title} path={category.path} isLarge={category.isLarge}/>
+        })}
+      </section>
     </div>
   );
 }

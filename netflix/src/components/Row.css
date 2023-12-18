@@ -1,36 +1,67 @@
-.row-container {
-    margin-left: 20px;
-    color:#fff;
+.movieRow{
+    margin-bottom: 30px;
 }
 
-.row-cards{
+.movieRow h2{
+    margin: 0px 0px 0px 30px !important;
+}
+
+.movieRow--listarea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list{
+   transition: all ease 0.5s;
+}
+
+.movieRow--item{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.movieRow--item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+    border-radius: 5px;
+}
+
+.movieRow--item img:hover{
+    transform: scale(1);
+}
+
+.movieRow--left,.movieRow--right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
-
-}
-.row-cards::-webkit-scrollbar{
-    display: none;
-}
-
-.movie-card{
-    object-fit: contain;
-    width: 100%;
-    max-height: 100px;
-    margin-bottom: 10px;
-    transition: transform 450ms;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
 }
 
-.movie-card-large{
-    object-fit: contain;
-    width: 100%;
-    max-height: 250px;
-    margin-bottom: 10px;
-    padding: 10px;
-    transition: transform 450ms;
+
+.movieRow--left{
+    left: 0;
+}
+.movieRow--right{
+    right: 0;
 }
 
-.movie-card:hover{
-   transform: scale(1.08);
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1;
+}
+
+@media (max-width:760px) {
+    .movieRow--left,
+    .movieRow--right{
+        opacity: 1;
+    }
 }

@@ -26,9 +26,9 @@ const categories =[
         isLarge:false
     },
     {
-        name: "romances",
-        title:"Romances",
-        path:`/discover/tv?api_key=${API_KEY}&with_genres=1074`,
+        name: "animations",
+        title:"Animações",
+        path:`/discover/tv?api_key=${API_KEY}&with_genres=16`,
         isLarge:false
     },
     {

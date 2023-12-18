@@ -1,49 +1,103 @@
-.banner-container{
-    color:#ffff;
-    object-fit: contain;
-    height: 448px;
-    background-size: cover;
+
+.featured{
+  height: 100vh;  
 }
-.banner-content{
-    margin-left: 30px;
-    padding-top: 140px;
-    height: 190px;
+
+.featured--vertical{
+ width: inherit;
+ height: inherit;
+ background: linear-gradient(to top,#111 10%, transparent 90%);
 }
-.banner-title{
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
-}
-.banner-description{
-    width: 45rem;
-    line-height: 1.3;
-    padding: 1rem;
-    font-size:0.8rem;
-    max-width: 360px;
-    height: 80px;
-}
-.banner-button-container{
+
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right,#111 30%, transparent 70%);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
 }
 
-.banner-button {
-    cursor: pointer;
-    color:#ffff;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    margin-left: 2rem;
-    background-color: rgba(51,51,51,0.5);
+.featured--name{
+    font-size: 60px;
+    font-weight: bold;
 }
 
-.banner-button:hover {
+.featured--info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+.featured--points,.featured--year{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--points{
+    color: #45d369;
+}
+
+.featured--description{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured--buttons{
+    margin-top: 15px;
+
+}
+
+.featured--watchbutton,.featured--mylistbutton{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+
+.featured--watchbutton:hover,.featured--mylistbutton:hover{
+    opacity: 0.7;
+}
+
+.featured--watchbutton{
+    background-color: #fff;
     color:#000;
-    background-color: #e6e6e6;
-    transition: all 0.2s;
+}
+.featured--mylistbutton{
+    background-color: #333;
+    color: #fff;
+}
+.featured--watchbutton--play{
+    font-size: 20px;
+}
+
+@media (max-width:760px) {
+    .featured{
+        
+        height: 90vh;  
+    }
+    .featured--name{
+        margin-top: 35px;
+        font-size: 40px;
+    }
+    .featured--description{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .featured--watchbutton,
+    .featured--mylistbutton,
+    .featured--info{
+        font-size: 16px;
+    }
 }

@@ -1,31 +1,34 @@
-.nav-container {
+header{
     position: fixed;
+    z-index: 999;
     top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 30px;
-    padding: 20px;
-    z-index: 1;
-    transition-timing-function: ease-in;
-    transition: all 0.5s;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition: all ease 0.5s;
 }
 
-.nav-logo{
-    position: fixed;
-    left: 20px;
-    width: 80px;
-    object-fit: contain;
+header.black{
+    background-color: #141414;
 }
 
-.nav-avatar{
-    position: fixed;
-    right: 20px;
-    width: 30px;
-    object-fit: contain;
+.header--logo{
+    height: 25px;
 }
 
-.nav-container-black{
-    background-color: #111;
-    transition: all 0.5s;
+.header--logo img{
+    height: 100%;
+}
+.header--user{
+    height: 35px;
+} 
+
+.header--user img{
+    height: 100%;
+    border-radius: 5px;
 }
